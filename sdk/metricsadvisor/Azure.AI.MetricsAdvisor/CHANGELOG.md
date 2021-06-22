@@ -4,6 +4,8 @@
 
 ### Breaking Changes
 - The whole `DatasourceCredential` API has been renamed to `DataSourceCredential`. This includes renames in types, methods, and properties.
+- Split the method `GetAnomalies` into two different methods: `GetAnomaliesForAlert` and `GetAnomaliesForDetectionConfiguration`.
+- Split the method `GetIncidents` into two different methods: `GetIncidentsForAlert` and `GetIncidentsForDetectionConfiguration`.
 - `DataFeedIngestionSettings` constructor now takes the required `ingestionStartTime` parameter. For this reason, the property `IngestionStartTime` is not nullable anymore.
 - `DataFeedMissingDataPointFillSettings` constructor now takes the required `fillType` parameter. For this reason, the property `FillType` is not nullable anymore.
 - `EmailNotificationHook` constructor now takes the required `name` parameter.
@@ -16,6 +18,7 @@
 - Moved `DatasourceCredential`, `DataFeedSource`, `NotificationHook`, and all of their concrete child types to the `Azure.AI.MetricsAdvisor.Administration` namespace.
 - Moved `MetricFeedback` and all of its concrete child types to the `Azure.AI.MetricsAdvisor` namespace.
 - Changed order of parameters of `MetricsAdvisorClient.GetMetricEnrichedSeriesData`. Now, `detectionConfigurationId` appears first.
+- In `MetricsAdvisorKeyCredential`, merged `UpdateSubscriptionKey` and `UpdateApiKey` into a single method, `Update`, to make it an atomic operation.
 
 ## 1.0.0-beta.4 (2021-06-07)
 
