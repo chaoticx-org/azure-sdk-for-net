@@ -12,7 +12,7 @@
   <ItemGroup>
     <!-- Add an OverrideDailyVersion attribute to prevent the Update-Dependencies script from overwriting it with a daily build version -->
     <PackageReference Include="Azure.Core" Version="1.14.0" />
-    <PackageReference Include="Azure.Identity" Version="1.4.0-beta.5" />
+    <PackageReference Include="Azure.Identity" Version="1.10.2" />
     <PackageReference Include="Azure.Messaging.EventHubs" Version="5.4.1" />
     <PackageReference Include="Azure.Messaging.EventHubs.Processor" Version="5.4.1" />
     <PackageReference Include="Azure.Security.Keyvault.Secrets" Version="4.2.0-beta.5" />
